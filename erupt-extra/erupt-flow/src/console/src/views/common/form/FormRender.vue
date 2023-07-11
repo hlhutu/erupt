@@ -4,7 +4,7 @@
     <el-form-item v-for="(item, index) in forms"
         style="margin-bottom: 8px;"
         v-show="item.props.perm!='H'"
-        :prop="item.id" :label="item.name !== 'SpanLayout'?item.title+'['+item.props.perm+']':''" :key="item.name + index">
+        :prop="item.id" :label="item.name !== 'SpanLayout'?item.title:''" :key="item.name + index">
 
       <!-- 普通内容 -->
       <form-design-render :ref="`sub-item_${item.id}`" v-model="_value[item.id]" :mode="mode" :config="item" @change="change"

@@ -23,7 +23,7 @@
         <el-col :span="24 / rows.length" v-for="(item, ri) in rows" :key="ri + '_row'">
           <el-form-item v-if="item.name !== 'SpanLayout' && item.name !== 'Description'" :prop="item.id"
                         v-show="item.props.perm!='H'"
-                        :label="item.name !== 'SpanLayout'?item.title+'['+item.props.perm+']':''" :key="item.name + ri">
+                        :label="item.name !== 'SpanLayout'?item.title:''" :key="item.name + ri">
             <form-design-render v-model="_value[item.id]" :mode="mode" :config="item"/>
           </el-form-item>
           <form-design-render v-else v-model="_value" :mode="mode" :config="item"/>
