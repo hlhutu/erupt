@@ -94,7 +94,7 @@ public class NewTaskListener implements AfterCreateActivityListener {
                                     .build());//将发起人作为审批人
                     break;
                 case FlowConstant.ASSIGN_TYPE_LEADER_TOP://发起人的所有上级
-                    int endLevel = props.getLeaderTop().getLevel();//最多x级的领导
+                    Integer endLevel = props.getLeaderTop().getLevel();//最多x级的领导
                     if("TOP".equals(props.getLeaderTop().getEndCondition())) {
                         endLevel = -1;//不限制层级
                     }
